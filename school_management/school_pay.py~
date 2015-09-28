@@ -11,7 +11,6 @@ no_sitemap = 1
 @frappe.whitelist(allow_guest=True)
 def get_school_details():
     sch_details = frappe.db.get_singles_dict("School Details")
-    #sch_details = frappe.db.get_single_value("School S")
     if sch_details:
         ret_str = json.dumps(sch_details)
     	frappe.response['data'] = ret_str

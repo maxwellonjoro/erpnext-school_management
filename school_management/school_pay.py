@@ -23,7 +23,7 @@ def new_school_details():
     return 
 
 @frappe.whitelist(allow_guest=True)
-def sample():
+def test():
     response = requests.post('http://localhost:8000/api/method/library_management.sample_app.ping')
     jsonStr = response.text
     responseData = json.loads(jsonStr)

@@ -9,6 +9,21 @@ no_cache = 1
 no_sitemap = 1
 
 @frappe.whitelist(allow_guest=True)
+def get_school_details():
+    sch_details = frappe.db.get_singles_dict("School Details")
+    #sch_details = frappe.db.get_single_value("School S")
+    if sch_details:
+        ret_str = json.dumps(sch_details)
+    	frappe.response['data'] = ret_str
+
+    return 
+
+@frappe.whitelist(allow_guest=True)
+def new_school_details():
+    new_doc("School Details")
+    return 
+
+@frappe.whitelist(allow_guest=True)
 def sample():
     response = requests.post('http://localhost:8000/api/method/library_management.sample_app.ping')
     jsonStr = response.text

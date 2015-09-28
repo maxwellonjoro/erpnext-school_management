@@ -33,5 +33,20 @@ def get_data():
 			"icon": "octicon octicon-file-directory",
 			"type": "module",
 			"label": _("Teacher")
-		}
+		},
+		"School Details": {
+		    "color": "#3498db",
+		    "icon": "octicon octicon-repo",
+		    "type": "module",
+		    "label": _("School Details")
+		},
+		"School Setup": {
+			"color": "#589494",
+			"icon": "icon-th",
+			"icon": "octicon octicon-credit-card",
+			"type": "page",
+			"link": "school-setup"
+		},
 	}
+
+

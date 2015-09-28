@@ -5,7 +5,6 @@ frappe.pages['school-setup'].on_page_load = function(wrapper) {
 		single_column: true
 	});
 
-	page.main.find(".pos-setting-message").removeClass('show');
 	page.main.html(frappe.render_template("school_page", {}));
 
 	//page.main.find(".btn-primary").on("click", function() {
@@ -16,11 +15,24 @@ frappe.pages['school-setup'].on_page_load = function(wrapper) {
 		url: "/api/method/school_management.school_pay.get_school_details",
 		success: function(data) {
 			if(!data.data.length) {
-				page.main.find(".pos-setting-message").removeClass('hide');
+				page.main.find(".pos-setting-message").addClass('hide');
+				page.main.find(".pos-setting-message-2").removeClass('hide2');
 			}
 			else{
-				page.main.find(".pos-setting-message").addClass('hide');
+				page.main.find(".pos-setting-message").removeClass('hide');
+				page.main.find(".pos-setting-message-2").addClass('hide2');
+				var json;
+				json = eval("(function(){return " + data.data + ";})()");
+				alert( "School already set up!" );
+				var element = document.getElementById("school-name");	
+				element.innerHTML = json.school_name;
+
+				element = document.getElementById("school-address");	
+				element.innerHTML = json.address;
+
+				element = document.getElementById("school-country");	
+				element.innerHTML = json.city + ", " + json.country;
 			}
 		}
-	})
+	});
 }

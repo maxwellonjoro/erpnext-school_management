@@ -13,7 +13,7 @@ def get_school_details():
     sch_details = frappe.db.get_singles_dict("School Details")
     if sch_details:
         ret_str = json.dumps(sch_details)
-    	frappe.response['data'] = ret_str
+    	frappe.response['data'] = ret_str #sch_details
 
     return 
 

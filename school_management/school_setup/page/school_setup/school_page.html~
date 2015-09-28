@@ -1,13 +1,13 @@
 <div class="text-center" style="padding: 40px;">
     <img src="/assets/erpnext/images/favicon.png" style="width: 100px; height: 100px; margin-bottom: 30px; opacity: 0.2" class="text-muted">
 	
-	<p>{%= __("Select type of transaction") %}</p>
-
-	<p style="margin-bottom: 30px;">
-		<button class="btn btn-primary btn-lg">{%=  __("Start") %}</button>
+	<p class="pos-setting-message-2 hide2">
+		<h2 id="school-name"></h2>
+		<h1 id="school-address"></h1>
+		<h id="school-country"></h>
     	</p>
 
-	<p class="pos-setting-message hide">
+	<p class="pos-setting-messages hide">
 		<a class="btn btn-default btn-sm" href="#Form/School Details/">{%=  __("Setup school") %}</a>
     	</p>
 </div>

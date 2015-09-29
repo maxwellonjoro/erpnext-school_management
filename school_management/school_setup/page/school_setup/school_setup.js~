@@ -15,15 +15,13 @@ frappe.pages['school-setup'].on_page_load = function(wrapper) {
 		url: "/api/method/school_management.school_pay.get_school_details",
 		success: function(data) {
 			if(!data.data.length) {
-				page.main.find(".pos-setting-message").addClass('hide');
-				page.main.find(".pos-setting-message-2").removeClass('hide2');
-			}
-			else{
-				page.main.find(".pos-setting-message").removeClass('hide');
-				page.main.find(".pos-setting-message-2").addClass('hide2');
+				page.main.find(".pos-setting-message-1").removeClass('hide');
+				alert("School not setup");
+			}else{
+				page.main.find(".pos-setting-message-2").removeClass('hide');
 				var json;
 				json = eval("(function(){return " + data.data + ";})()");
-				alert( "School already set up!" );
+				alert("School already setup up");
 				var element = document.getElementById("school-name");	
 				element.innerHTML = json.school_name;
 

@@ -14,14 +14,12 @@ frappe.pages['school-setup'].on_page_load = function(wrapper) {
 	$.ajax({
 		url: "/api/method/school_management.school_pay.get_school_details",
 		success: function(data) {
-			if(!data.data.length) {
-				page.main.find(".pos-setting-message-1").removeClass('hide');
-				alert("School not setup");
+			if(!data.data) {				
+				page.main.find(".pos-setting-message").removeClass('hide');
 			}else{
 				page.main.find(".pos-setting-message-2").removeClass('hide');
 				var json;
 				json = eval("(function(){return " + data.data + ";})()");
-				alert("School already setup up");
 				var element = document.getElementById("school-name");	
 				element.innerHTML = json.school_name;
 

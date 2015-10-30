@@ -26,6 +26,16 @@ def get_data():
 					"type": "doctype",
 					"name": "Class Attendance",
 					"description": _("Class Attendance")
+				},
+				{
+					"type": "doctype",
+					"name": "Duration",
+					"description": _("Duration")
+				},
+				{
+					"type": "doctype",
+					"name": "Subject",
+					"description": _("Subject")
 				}
 			]
 		}

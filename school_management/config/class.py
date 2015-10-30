@@ -22,6 +22,11 @@ def get_data():
 					"name": "Class Setup",
 					"description": _("Class Setup")
 				},
+				{
+					"type": "doctype",
+					"name": "Class Attendance",
+					"description": _("Class Attendance")
+				}
 			]
 		}
 	]

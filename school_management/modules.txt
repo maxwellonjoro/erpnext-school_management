@@ -4,4 +4,3 @@ Library
 Students
 Teacher
 School Setup
-Attendance

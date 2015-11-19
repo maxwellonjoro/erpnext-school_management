@@ -39,11 +39,11 @@ def get_data():
 		    "icon": "octicon octicon-repo",
 		    "type": "module",
 		    "label": _("School Details")
-		}
+		},
 		"School Setup": {
 			"color": "#589494",
 			"icon": "icon-th",
-			"icon": "octicon octicon-credit-card",
+			"icon": "icon-building",
 			"type": "page",
 			"link": "school-setup"
 		},

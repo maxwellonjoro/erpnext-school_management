@@ -1,0 +1,21 @@
+{
+ "content": null, 
+ "creation": "2015-11-18 22:21:20.150160", 
+ "docstatus": 0, 
+ "doctype": "Page", 
+ "modified": "2015-11-18 22:21:52.650869", 
+ "modified_by": "Administrator", 
+ "module": "Students", 
+ "name": "quickpay2", 
+ "owner": "Administrator", 
+ "page_name": "quickpay2", 
+ "roles": [
+  {
+   "role": "Administrator"
+  }
+ ], 
+ "script": null, 
+ "standard": "Yes", 
+ "style": null, 
+ "title": "QuickPay2"
+}

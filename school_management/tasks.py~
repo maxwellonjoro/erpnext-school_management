@@ -30,15 +30,18 @@ def all():
 	json_data = {}
 	json_data['students'] = s_str
 	send_str = json.dumps(json_data)
+    
+	try:
+            response = requests.post('http://api.quickpay.co.ke/quickpaynotification/api/register/registerstudent', data=send_str)
 
-	response = requests.post('http://api.quickpay.co.ke/quickpaynotification/api/register/registerstudent', data=send_str)
+            res_result = response.json()['Result']
+            res_data = response.json()['Data']
     
-        res_result = response.json()['Result']
-        res_data = response.json()['Data']
-    
-        if res_result=='Ok' and res_data=='00':
-            for d in students:
-	        frappe.db.sql("update `tabAdmit Student` set uploaded=1 where registration_number=%s",d.registration_number)
+            if res_result=='Ok' and res_data=='00':
+                for d in students:
+	            frappe.db.sql("update `tabAdmit Student` set uploaded=1 where registration_number=%s",d.registration_number)
+	except:
+	    return
 
     return 
 

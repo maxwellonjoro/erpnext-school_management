@@ -1,0 +1,21 @@
+{
+ "content": null, 
+ "creation": "2015-11-02 18:54:46.250440", 
+ "docstatus": 0, 
+ "doctype": "Page", 
+ "modified": "2015-11-05 13:03:59.242796", 
+ "modified_by": "Administrator", 
+ "module": "Students", 
+ "name": "students", 
+ "owner": "Administrator", 
+ "page_name": "Students", 
+ "roles": [
+  {
+   "role": "Administrator"
+  }
+ ], 
+ "script": null, 
+ "standard": "Yes", 
+ "style": null, 
+ "title": "Students"
+}

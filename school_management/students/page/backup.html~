@@ -1,0 +1,18 @@
+<div class="text-center" style="padding: 40px;">
+    <img src="/Admit Student/{% doc.student_photo" style="width: 100px; height: 100px; margin-bottom: 30px; opacity: 0.2" class="text-muted">
+
+    <div class="col-sm-4">
+	<div class="students hide">
+		<a href="#"><h4 id="first-name"></h4></a>
+		<p id="first-name"></p>
+		<p id="last-name"></p>
+		<p id="registration-number"></p>
+		<p id="g1-address"></p>
+		<p>{%=  __("Student information") %}</p>
+	</div>
+    </div>
+
+    <div class="no-student-message hide">
+		<p>{%=  __("No student information found") %}</p>
+    </div>
+</div>

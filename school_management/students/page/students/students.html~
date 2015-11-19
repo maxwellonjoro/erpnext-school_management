@@ -1,0 +1,28 @@
+{%- block header -%}
+{%- endblock -%}
+
+{%- block navbar -%}
+{%- endblock -%}
+
+{%- block content -%}
+<div class="text-center" style="padding: 40px;">
+	<p>Student Information</p>
+	{% for s in students %}
+	<p>Student Information {{ s.first_name }}</p>
+	<div class="col-sm-4">
+		<div class="students">
+			<p>Student Information</p>
+			<a href="#"><h4 id="first-name"></h4></a>
+			<p id="first-name"></p>
+			<p id="last-name"></p>
+			<p id="registration-number"></p>
+			<p id="g1-address"></p>
+		</div>
+	</div>
+	{% endfor %}
+
+	<div class="no-student-message">
+		<p>No student information found</p>
+	</div>
+</div>
+{%- endblock -%}

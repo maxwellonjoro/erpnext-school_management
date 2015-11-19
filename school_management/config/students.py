@@ -27,6 +27,11 @@ def get_data():
 					"name": "Student Registration",
 					"description": _("Student Registration")
 				},
+				{
+					"type": "page",
+					"name": "Students",
+					"description": _("Students")
+				},
 			]
 		}
 	]

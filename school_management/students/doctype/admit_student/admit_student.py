@@ -25,14 +25,17 @@ class AdmitStudent(Document):
 		json_data['students'] = s_str
 		send_str = json.dumps(json_data)
 
-		response = requests.post('http://api.quickpay.co.ke/quickpaynotification/api/register/registerstudent', data=send_str)
+		try:
+		    response = requests.post('http://api.quickpay.co.ke/quickpaynotification/api/register/registerstudent', data=send_str)
 	    
-		res_result = response.json()['Result']
-		res_data = response.json()['Data']
-	    
-		if res_result=='Ok' and res_data=='00':
-                    frappe.db.sql("update `tabAdmit Student` set uploaded=1 where registration_number=%s",self.get("registration_number"))
+		    res_result = response.json()['Result']
+		    res_data = response.json()['Data']
 
+		    if res_result=='Ok' and res_data=='00':
+                        frappe.db.sql("update `tabAdmit Student` set uploaded=1 where registration_number=%s",self.get("registration_number"))
+		except Exception as e:
+		    return
+	    
 	    	return 
 
 

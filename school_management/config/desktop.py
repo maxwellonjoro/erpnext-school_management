@@ -43,7 +43,7 @@ def get_data():
 		"School Setup": {
 			"color": "#589494",
 			"icon": "icon-th",
-			"icon": "octicon octicon-credit-card",
+			"icon": "icon-building",
 			"type": "page",
 			"link": "school-setup"
 		},

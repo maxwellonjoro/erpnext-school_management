@@ -1,0 +1,20 @@
+{% response = requests.post%}
+{% if response: 
+       for s in response%}
+<div class="text-center" style="padding: 40px;">
+    <img src="/Admit Student/{% doc.student_photo" style="width: 100px; height: 100px; margin-bottom: 30px; opacity: 0.2" class="text-muted">
+
+    <div class="col-sm-4">
+	<a href="/Admit Student/{% doc.first_name %}"><h4 id="first-name">{% doc.first_name %}</h4></a>
+	<p id="first-name">{% doc.first_name %}</p>
+	<p id="last-name">{% doc.last_name %}</p>
+	<p id="registration-number"> {% doc.registration_number %}</p>
+	<p id="g1-address">{% doc.g1address %}</p>
+    </div>
+</div>
+{% else:%}
+<div class="text-center" style="padding: 40px;">
+    <div class="col-sm-4">
+	<p>{%=  __("No student information found") %}</p>
+    </div>
+</div>

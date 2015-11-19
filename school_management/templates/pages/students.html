@@ -1,0 +1,30 @@
+{%- block header -%}
+{%- endblock -%}
+
+{%- block navbar -%}
+{%- endblock -%}
+
+{%- block content -%}
+<div class="text-center" style="padding: 40px;">
+	<p>Student Information</p>
+	{{ user }}
+	{% if students: %}
+		{% for s in students %} 
+			<div class="col-sm-4">
+				<div class="students">
+					<a href="/Admit Student/{{s.registration_number}}"><h4 id="names">{{ s.first_name + ' ' + s.last_name }}</h4></a>
+					<p id="registration-number">{{ s.registration_number }}</p>
+					<p id="assign_class">{{ s.assign_class }}</p>
+				</div>
+			</div>
+		{% endfor %}
+	{% else %}
+		<div class="no-student-message">
+			<p>No student information found</p>
+		</div>
+	{% endif %}
+</div>
+<script>
+	{% include "templates/includes/students.js" %}
+</script>
+{%- endblock -%}
